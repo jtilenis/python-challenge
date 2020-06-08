@@ -11,7 +11,7 @@ max_profit = 0
 min_profit = 0
 budget_data_csv = os.path.join("../PyBank/Resources", "budget_data.csv")
 # Specify the file to write to
-output_path = os.path.join("..", "PyBank/analysis", "results.csv")
+output_path = os.path.join("..", "PyBank/analysis", "results.txt")
 
 with open(budget_data_csv) as csvfile:
     csvreader = csv.reader(csvfile,delimiter=",")
