@@ -38,7 +38,7 @@ nbr_candidates = len(candidates)
 i = 0
 while i < nbr_candidates:
   pct_votes = votes[i]/total_votes * 100
-  print(f"{candidates[i]}: {pct_votes:.4f}% ({votes[i]})")
+  print(f"{candidates[i]}: {pct_votes:.3f}% ({votes[i]})")
   # see who the winner is
   if (votes[i] > winning_votes):
     winning_votes = votes[i]
@@ -56,14 +56,13 @@ with open(output_path, "w") as outfile:
   #csvwriter = csv.writer(csvfile)
   outfile.write(f"Election Results\n")
   outfile.write(f"----------------------------\n")
-  outfile.write(f"----------------------------\n")
   outfile.write(f"Total Votes: {total_votes}\n")
   outfile.write(f"----------------------------\n")
   # write the candidates to the text file
   i = 0
   while i < nbr_candidates:
     pct_votes = round(votes[i]/total_votes * 100,2)
-    outfile.write(f"{candidates[i]}: {pct_votes:.4f}% ({votes[i]})\n")
+    outfile.write(f"{candidates[i]}: {pct_votes:.3f}% ({votes[i]})\n")
     i += 1
   outfile.write(f"----------------------------\n")
   # write winning candidate
